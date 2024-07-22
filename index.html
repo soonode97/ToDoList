@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+    .todo_background {
+        background-color: whitesmoke;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px gray;
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        margin: 200px auto auto auto;
+    }
+    
+    .todo_background > h1 {
+        font-family: "Jua", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .taskList {
+        margin: 2px auto 2px auto;
+        background-color: white;
+        padding: 10px 10px 10px 10px;
+        margin: 5px auto 10px auto;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px rgb(206, 206, 206);
+    }
+
+    .taskList > p {
+        font-family: "Jua", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 2px auto 2px auto;
+        width: 300px;
+        font-size: 20px;
+    }
+
+    .add_task_form {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .add_task_form > input {
+        font-size: 15px;
+        height: 30px;
+    }
+
+    .add_task_form > button {
+        margin-left: auto;
+        font-size: 20px;
+        margin-left: 20px;
+    }
+
+    .added_task_items {
+        padding: 10px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .added_task_items > div {
+        margin-left: auto;
+    }
+
+    .added_task_items > div > button {
+        margin-left: 20px;
+        
+    }
+    
+</style>
+
+<body>
+    <div class="body_background">
+        <div class="todo_background">
+            <h1 style="font-size:50px">To Do List</h1>
+            <form class="add_task_form">
+                <input id="task_input" type="text" placeholder="할 일을 입력하세요">
+                <button id="submit" type="button">추가</button>
+            </form>
+            <ul></ul>
+            <div class="taskList">
+                <p>할 일 목록</p>
+                <div id="my_taskList">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+<script src="task.js"></script>
+
+</html>
